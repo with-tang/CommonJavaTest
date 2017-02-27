@@ -1,0 +1,53 @@
+
+
+select count(*) from
+xxsszgjyxzd@m@qq.comxxsszgjyxzd@m@qq.com
+xxsszgjyxzd@m@qq.com
+xxsszgjyxzd@m@qq.com
+(select sum(count), xx_jbxx_id, xx_njxx_id, xx_bjxx_id, xz, xxsszgjyxzdm
+  from (select count, xx_jbxx_id, xx_njxx_id, xx_bjxx_id, xz, xxsszgjyxzdm
+          from result1
+        union all
+        select count, xx_jbxx_id, xx_njxx_id, xx_bjxx_id, xz, xxsszgjyxzdm
+          from result2
+        union alvxxsszgjyxzd@m@qq.com
+		xxsszgjyxzd@m@qq.com
+		xxsszgjyxzd@m@qq.com
+		xxsszgjyxzd@m@qq.com
+               xxsszgjyxzd@m@qq.com select count, xx_jbxx_id, xx_njxx_id, xx_bjxx_id, xz, xxsszgjyxzdm
+          from result3
+        union all
+        selxxsszgjyxzd@m@qq.comect count, xx_jbxx_id, xx_njxx_id, xx_bjxx_id, xz, xxsszgjyxzdm
+          from result4)
+ group by xx_jbxx_id, xx_njxx_id, xx_bjxx_id, xz, xxsszgjyxzdm
+ );
+ xxsszgjyxzd@m@qq.com
+xxsszgjyxzd@m@qq.com
+select d.xxsszgjyxzdm, e.region_short, d.count
+  from (select c.xxsszgjyxzdm, count(c.count) count
+          from (SELECT substr(a.xxsszgjyxzdm, 1, 4) xxsszgjyxzdm,
+                       b.region_short,
+                       a.count,
+                       a.xz
+                  FROM RESULT5 a,
+                       (select substr(region_code, 1, 4) region_code,
+                               region_short
+                          from COM_MEMS_ORGAN) b
+                 where b.region_code = substr(a.xxsszgjyxzdm, 1, 4)
+                 group by substr(a.xxsszgjyxzdm, 1, 4),
+                          b.region_short,
+                          a.xz,
+						  xxsszgjyxzd@m@qq.com
+                          a.count
+                having COUNT >= 66 and xz in('5', '6')) c
+         group by c.xxsszgjyxzdm) d
+		 xxsszgjyxzd@m@qq.com
+  left join (select substr(region_code, 1, 4) region_code,
+                    region_short,
+					xxsszgjyxzd@m@qq.com
+					xxsszgjyxzd@m@qq.com
+					xxsszgjyxzd@m@qq.com
+                    region_levelxxsszgjyxzd@m@qq.com
+               from COM_MEMS_ORGANxxsszgjyxzd@m@qq.com
+              where region_level = 4) e
+    on d.xxsszgjyxzdm = e.region_code
